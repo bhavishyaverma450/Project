@@ -1,12 +1,19 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv(R"C:\Users\Welcome\Downloads\airqualtiyindex.csv")
+df = pd.read_excel(R"C:\Users\Welcome\Downloads\world_cup_results.xlsx")
 
-print("First five values: ")
-df.head()
-print("Info of the data: ")
-df.info()
-print("Description of the data: ")
-df.describe()
+print("First 5 records: ")
+print(df.head())
+print("Dataset info: ")
+print(df.info())
+print("Summary Statistics: ")
+print(df.describe(include='all'))
+
+print("# Data Cleaning: \n")
+#this is for missing values!!!
+print("Total number of missing values = ")
+print(df.isnull().sum())
+
+
 
