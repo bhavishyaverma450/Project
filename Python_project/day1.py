@@ -19,5 +19,10 @@ print("Rows with any missing values: ")
 print(df[df.isnull().any(axis=1)])
 print("\n")
 
-df_cleaned = df.dropna()#heer all null values are dropped from dataset
-df_filled = df.fillna(0) #here all null values are replaced by 0
+matches_cleaned = df.copy()
+matches_cleaned.drop_duplicates(inplace=True) #this drops the duplicate values
+matches_cleaned.fillna('', inplace=True) #this replaces all na values, inplace of the fields
+
+
+cleaned_file_path = '/mnt/data/cleaned_data.xlsx' #this saves the cleaned data to new excel file
+
