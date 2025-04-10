@@ -5,7 +5,12 @@ import seaborn as sbn
 
 #visualition
 
-#*barplot
-# plt.figure(figsize=(8,4))
-# plt.title("
 
+plt.figure(figsize=(12, 6))
+
+plt.title('Number of World Cup Matches Hosted by Country')
+plt.xlabel('Country')
+plt.ylabel('Number of Matches')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
